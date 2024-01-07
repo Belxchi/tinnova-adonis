@@ -1,0 +1,43 @@
+@baseUrl = http://localhost:3000
+
+### Buscar todos os produtores
+GET {{baseUrl}}/produtores HTTP/1.1
+
+### Buscar um produtor
+GET {{baseUrl}}/produtores/1 HTTP/1.1
+
+### Adicionar um produtor
+POST {{baseUrl}}/produtores HTTP/1.1
+Content-Type: application/json
+
+{
+  "cpfCnpj": "88790303024",
+  "nome": "Produtor 1",
+  "nomeFazenda": "Fazenda Legal",
+  "cidade": "Cidade Chata",
+  "estado": "SP",
+  "areaTotal": 200,
+  "areaAgricultavel": 50,
+  "areaVegetacao": 50,
+  "cultura": ["algodao", "soja"]
+}
+
+### Excluir um produtor
+DELETE {{baseUrl}}/produtores/5 HTTP/1.1
+
+### Editar um pordutor
+PUT {{baseUrl}}/produtores/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "cpfCnpj": "61257371010",
+  "nome": "Produtor 4",
+  "nomeFazenda": "Fazenda Legal",
+  "cidade": "Cidade Chata",
+  "estado": "AC",
+  "areaTotal": 100,
+  "areaAgricultavel": 50,
+  "areaVegetacao": 50,
+  "cultura": ["soja", "milho"]
+}
+

@@ -1,0 +1,4 @@
+@baseUrl = http://localhost:3000
+
+### Buscar todos os produtores
+GET {{baseUrl}}/dashboard HTTP/1.1
